@@ -42,3 +42,5 @@ config/config.php
 #ignore all the files in the vendor directory
 vendor/
 
+#ignore composer.lock
+/composer.lock
