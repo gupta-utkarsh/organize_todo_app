@@ -1,0 +1,335 @@
+@import 'reset';
+@import 'typography';
+
+$wrap-background : rgba(256,256,256,1);
+$form-background : rgba(255,255,255,0.8);
+$primary-color: rgb(49,49,49);
+$secondary-color: rgb(69,69,69);
+$alternate-color: rgb(0,0,0); 
+
+@mixin box-shadow($color){
+	-webkit-box-shadow: 0px 0px 10px -2px $color;
+	    -moz-box-shadow: 0px 0px 10px -2px $color;
+	        box-shadow: 0px 0px 10px -2px $color;
+}
+
+@mixin form-shadow($color){
+	-webkit-box-shadow: 1px 6px 10px -2px $color;
+	    -moz-box-shadow: 1px 6px 10px -2px $color;
+	        box-shadow: 1px 6px 10px -2px $color;	
+}
+
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	   		border-radius: $radius;
+}
+
+@mixin padding($size) {
+  padding: $size + px;
+  padding: ($size / 10) + rem;
+}
+
+@mixin padding-all($top, $right, $bottom, $left) {
+	$top_px : $top + px;
+	$right_px : $right + px;
+	$bottom_px : $bottom + px;
+	$left_px : $left + px;
+	$top_rem : ($top/10) + rem;
+	$right_rem : ($right/10) + rem;
+	$bottom_rem : ($bottom/10) + rem;
+	$left_rem : ($left/10) + rem;
+	padding : $top_px $right_px $bottom_px $left_px;
+	padding : $top_rem $right_rem $bottom_rem $left_rem;
+}
+
+@mixin margin($size) {
+  	margin: $size + px;
+  	margin: ($size / 10) + rem;
+}
+
+@mixin margin-all($top, $right, $bottom, $left) {
+	$top_px : $top + px;
+	$right_px : $right + px;
+	$bottom_px : $bottom + px;
+	$left_px : $left + px;
+	$top_rem : ($top/10) + rem;
+	$right_rem : ($right/10) + rem;
+	$bottom_rem : ($bottom/10) + rem;
+	$left_rem : ($left/10) + rem;
+	margin : $top_px $right_px $bottom_px $left_px;
+	margin : $top_rem $right_rem $bottom_rem $left_rem;
+}
+
+@mixin transition($property, $time){
+	-webkit-transition : $property $time ease-in;
+	   -moz-transition : $property $time ease-in;
+	    -ms-transition : $property $time ease-in;
+	     -o-transition : $property $time ease-in;
+	     	transition : $property $time ease-in;
+}
+
+
+
+
+%visuallyhidden {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+html{
+	width:100%;
+	height:100%;
+	max-height: 100%;
+}
+
+body{
+	background: url('../img/img.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+	min-height : 100%;
+	width : 100%;
+
+
+	>.head{
+		@include padding-all(10,10,10,45); 
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $primary-color;
+		background: $wrap-background;
+
+		>.content{
+			>.button{
+				@include margin-all(0,10,0,10);
+				@include padding(8);
+				border: 0.2rem solid $primary-color;
+						
+				&:hover{
+					@include transition(all,0.4s);
+					background: $primary-color;
+					color: $wrap-background;
+				}
+			}
+		}
+	}
+
+	.wrapper{
+		@include padding(5);
+		display: block;
+		min-height: 100%;
+		width: 100%;
+		text-align : center;
+
+		nav{
+			@extend %visuallyhidden;
+		}
+		
+		header{
+
+			>.add_task{
+				@include margin-all(20,0,10,0);
+				@include padding-all(0,0,10,0);
+				@include transition(all, 0.2s);
+				@include box-shadow(#777);
+				background: $form-background;
+				color: $primary-color;
+				display:inline-block;
+				position: relative;
+				text-align: left;
+				width:40%;
+				min-width:300px;
+
+			
+				>.fa-list-ul{
+					@include padding-all(10,20,0,20);
+					@include font-size(18);
+					position : absolute;
+					right: 0;
+					cursor:pointer;
+					display: none;
+				}
+
+				>div{
+					@include padding-all(10,20,0,20);
+					@include transition(all, 0.5s);
+					width : 100%;
+				}
+
+				>.add_task_title{
+					display: none;
+
+					&:hover{
+						cursor:text;
+					}
+				}
+
+
+
+				.add_task_list{
+					display: none;
+
+					.add_task_list_item{
+						display:flex;
+						align-items: center;
+						position: relative;
+
+						.check{
+							@include padding-all(0,10,0,10);
+
+							input:hover{
+								cursor: pointer;
+							}
+						}
+
+						.add_task_list_item_content{
+							@include padding-all(5,0,5,0);
+						
+							&:hover{
+								cursor:text;
+							}
+						}
+
+						.fa-remove{
+							@include margin(10);
+							position: absolute;
+							display: none;
+							right: 0;
+							
+							&:hover{
+								cursor: pointer;
+							}
+						}
+					}
+				}
+
+				.add_task_list_item_plus{
+					display: none;
+					@include margin-all(10,0,0,0);
+				
+
+					&:hover{
+						cursor: pointer;
+					}
+
+				}	
+				#add_task_form{ 
+					display: none;
+					height : 3rem;
+
+					input[type=submit]{
+						@include padding-all(10,20,10,20);
+						position:absolute;
+						right:0;
+						cursor:pointer;
+					}
+				}
+				
+			}
+		}
+
+		main{
+			@include padding-all(40,40,0,40);
+			width: 100%;
+
+			.task{
+				@include form-shadow(#777);
+				@include padding(10);
+				@include margin-all(5,5,20,5);
+				background: $form-background;
+				color: $alternate-color;
+				position: relative;
+				display: inline-flex;
+				flex-direction: column;
+				align-items: stretch;
+				width:20%;
+
+				&:hover{
+					.task_header{
+						.task_remove{
+							display: block;
+							cursor: pointer;
+						}
+					}
+				}
+
+
+				.task_header{
+					@include padding-all(0,10,0,10);
+					@include margin-all(0,20,0,0);
+					flex-basis: auto;
+					display: flex;
+
+					.task_title{
+						@include padding-all(0,10,10,0);
+						text-align: left;
+					}
+
+					.task_remove{
+						@include padding-all(5,10,0,0);
+						display: none;
+						position: absolute;
+						right:0;	
+						top:0;
+					}
+				}
+
+				.task_content{
+					@include padding-all(10,10,0 ,10);
+					flex-basis: auto;
+					text-align: left;
+					word-wrap: break-word;
+
+					.task_list{
+						display: flex;
+						flex-direction: column;
+
+						.task_list_item{
+							@include margin-all(0,0,10,0);
+							display: flex;
+
+							.task_list_item_content{
+								@include margin-all(0,0,0,10);
+							}
+						}
+					}
+				}
+			}	
+		}
+
+		aside{
+			@extend %visuallyhidden;
+		}
+
+		.alert{
+			position: fixed;
+			top:0;
+			height: 30px;
+			width: 100px;
+			display: none;
+		}
+	}
+}
+
+.form_focus_background{
+	background:$wrap-background !important;
+	color: $primary-color !important; 
+}
+
+.line_through{
+	text-decoration: line-through;
+}
+
+	
+.tasks{
+	>span{
+		display: block;
+	}
+}
+

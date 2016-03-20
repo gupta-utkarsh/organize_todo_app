@@ -6,6 +6,7 @@
 *.exe
 *.o
 *.so
+*.sh
 
 # Packages #
 ############
@@ -43,3 +44,6 @@ vendor/
 
 #ignore composer.lock
 /composer.lock
+node_modules/
+/todolist.todo
+.sass-cache/

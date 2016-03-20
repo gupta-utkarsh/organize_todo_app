@@ -240,8 +240,9 @@ html {
   max-height: 100%; }
 
 body {
-  background: url("../img/wallpaper.jpg") no-repeat center center fixed;
+  background: url("../img/img.png");
   background-size: cover;
+  background-repeat: no-repeat;
   min-height: 100%;
   width: 100%; }
   body > .head {
@@ -420,6 +421,7 @@ body {
       display: none; }
 
 .form_focus_background {
+  background: white !important;
   color: #313131 !important; }
 
 .line_through {

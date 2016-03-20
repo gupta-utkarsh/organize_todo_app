@@ -165,7 +165,7 @@ $(document).ready(function(){
 		});
 	}
 
-	function mason(appended=null){
+	function mason(){
 		main = document.querySelector('main');
 			masonry = new Masonry(main, {
 				itemSelector: '.task'

@@ -5,7 +5,7 @@
 		<title>
 			<?php echo $title; ?>
 		</title>
-		<link rel="stylesheet" type="text/css" href="/organize/css/style.css" />
 		<link rel="stylesheet" type="text/css" href="/organize/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="/organize/css/style.min.css" />
 	</head>
 	<body>
