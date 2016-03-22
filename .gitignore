@@ -43,3 +43,11 @@ vendor/
 
 #ignore composer.lock
 /composer.lock
+
+.sass-cache/
+
+/gitlog.sh
+
+node_modules/
+
+/todolist.todo

@@ -47,7 +47,6 @@
 							$this->message = "Invalid username or password";	
 						}
 						else{
-							session_destroy();
 							session_regenerate_id(true);
 							session_start();
 							$_SESSION['user_id'] = $id;
