@@ -44,6 +44,12 @@ vendor/
 
 #ignore composer.lock
 /composer.lock
+
+#ignore node_modules
 node_modules/
+
+#ignore to-do list
 /todolist.todo
+
+#ignore .sass-cache	
 .sass-cache/

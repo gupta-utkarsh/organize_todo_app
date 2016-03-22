@@ -1,7 +1,7 @@
 <?php
 	require_once 'head.php';
 ?>					
-		<form action="../index.php/register" method="post">
+		<form action="/organize/index.php/register" method="post">
 			<fieldset>
 				<legend>Sign Up</legend>
 				Username you want to take :

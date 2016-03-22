@@ -1,7 +1,7 @@
 <?php
 	require_once 'head.php';
 ?>	
-		<form action="sign_in" method="post">
+		<form action="/organize/index.php/sign_in" method="post">
 			<fieldset>
 				<legend>Log In</legend>
 				<label>

@@ -45,7 +45,7 @@ module.exports = function(grunt){
 			        banner: '/*! script.js 1.0.0 | Utkarsh Gupta | MIT Licensed */'
 		      },
 		      files: {
-		            'public/js/scirpt.min.js' : 'public/src/js/script.js'
+		            'public/js/script.min.js' : 'public/src/js/script.js'
 		      }
 		   }
 		},

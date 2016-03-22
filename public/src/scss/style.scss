@@ -303,10 +303,6 @@ body{
 			}	
 		}
 
-		aside{
-			@extend %visuallyhidden;
-		}
-
 		.alert{
 			position: fixed;
 			top:0;
