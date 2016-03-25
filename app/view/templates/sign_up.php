@@ -1,6 +1,7 @@
 <?php
 	require_once 'head.php';
-?>					
+?>		
+		<link rel="stylesheet" type="text/css" href="/organize/css/authenticate.min.css">			
 		<form action="/organize/index.php/register" method="post">
 			<fieldset>
 				<legend>Sign Up</legend>

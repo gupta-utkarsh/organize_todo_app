@@ -1,0 +1,1 @@
+body:before{white-space:pre;font-family:monospace;content:"Sass::SyntaxError: \"body .wrapper nav\" failed to @extend \"%visuallyhidden\".\A The selector \"%visuallyhidden\" was not found.\A Use \"@extend %visuallyhidden !optional\" if the extend should be able to fail.\A "}

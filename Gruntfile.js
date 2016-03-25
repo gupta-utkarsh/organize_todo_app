@@ -4,7 +4,8 @@ module.exports = function(grunt){
 		sass: {
 			dist: {
 				files : {
-					'public/src/css/style.css' : 'public/src/scss/style.scss'
+					'public/src/css/home.css' : 'public/src/scss/home.scss',	
+					'public/src/css/authenticate.css' : 'public/src/scss/authenticate.scss'
 				}
 			}
 		},
@@ -55,7 +56,8 @@ module.exports = function(grunt){
 		         banner: '/*! style.css 1.0.0 | Utkarsh Gupta | MIT Licensed */'
 		      },
 		      files: {
-		         'public/css/style.min.css': 'public/src/css/style.css'
+		         'public/css/home.min.css': 'public/src/css/home.css',
+		         'public/css/authenticate.min.css' : 'public/src/css/authenticate.css'
 		      }
 		  }
 		}
