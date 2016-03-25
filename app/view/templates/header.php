@@ -1,6 +1,7 @@
 <?php
 	require_once "head.php";
 ?>		
+		<link rel="stylesheet" type="text/css" href="/organize/css/home.min.css">
 		<div class="head">
 			<div class="brand-image">
 				<h3>Organize</h3>

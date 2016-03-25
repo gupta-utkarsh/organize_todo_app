@@ -1,0 +1,70 @@
+@font-face {
+	font-family: Tahoma-Bold;
+	src: url("../fonts/tahoma_bold10.ttf")
+}
+
+$font-stack: Tahoma, Geneva, sans-serif;
+$heading-font-stack: Tahoma-Bold, Geneva, sans-serif;
+
+
+@mixin font-size($size) {
+  font-size: $size + px;
+  font-size: ($size / 10) + rem;
+  line-height: ($size*1.5) + px;
+  line-height: (($size*1.5) / 10) + rem;
+}
+
+body *{
+	@include font-size(16);
+	font-family: $font-stack;
+}
+
+	h1,h2,h3,h4,h5,h6{
+		font-family: $heading-font-stack;
+	}
+
+		h1{
+			@include font-size(48);
+		}
+
+		h2{
+			@include font-size(36);
+		}
+
+		h3{
+			@include font-size(28);
+		}
+
+		h4{
+			@include font-size(18);
+		}
+
+		h5{
+			@include font-size(16);
+		}
+
+		h6{
+			@include font-size(12);
+		}
+
+	blockquote{
+		@include font-size(24);
+	}
+
+	header{
+		.add_task{
+			.add_task_title{
+				font-family: $heading-font-stack;
+				@include font-size(16);
+			}
+		}
+	}
+
+	main{
+		.task{
+			.task_title{
+				font-family: $heading-font-stack;
+				@include font-size(18);
+			}
+		}
+	}
