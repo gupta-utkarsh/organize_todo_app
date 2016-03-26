@@ -1,7 +1,7 @@
 # Organize | A to-do list application
 
 This application is based on the MVC Framework and the backend is on PHP.
-The application uses [ToroPHP](https://github.com/anandkunal/ToroPHP) for routing.
+The application uses [ToroPHP](https://github.com/anandkunal/ToroPHP) for routing and [Twig](https://github.com/twigphp/Twig) for templates.
 
 ### Set Up : 
 - Clone the repository.
