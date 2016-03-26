@@ -5,7 +5,8 @@ module.exports = function(grunt){
 			dist: {
 				files : {
 					'public/src/css/home.css' : 'public/src/scss/home.scss',	
-					'public/src/css/authenticate.css' : 'public/src/scss/authenticate.scss'
+					'public/src/css/authenticate.css' : 'public/src/scss/authenticate.scss',
+					'public/src/css/global.css' : 'public/src/scss/global.scss'
 				}
 			}
 		},
@@ -57,7 +58,8 @@ module.exports = function(grunt){
 		      },
 		      files: {
 		         'public/css/home.min.css': 'public/src/css/home.css',
-		         'public/css/authenticate.min.css' : 'public/src/css/authenticate.css'
+		         'public/css/authenticate.min.css' : 'public/src/css/authenticate.css',
+		         'public/css/global.min.css' : 'public/src/css/global.css'
 		      }
 		  }
 		}

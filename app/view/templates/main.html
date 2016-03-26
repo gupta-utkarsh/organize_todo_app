@@ -1,0 +1,9 @@
+	<main>
+	{% for task in user.get_tasks %}
+		{% include 'task.html' %}
+	{% else %}
+		Whoops! No tasks are present! Go ahead and create one!
+	{% endfor %}				
+	</main>
+</div>
+		

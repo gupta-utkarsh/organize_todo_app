@@ -1,7 +1,4 @@
-<?php
-	require_once 'head.php';
-?>	
-		<link rel="stylesheet" type="text/css" href="/organize/css/authenticate.min.css">	
+	{% include 'head.html' %}
 		<form action="/organize/index.php/sign_in" method="post">
 			<fieldset>
 				<legend>Log In</legend>
@@ -19,11 +16,7 @@
 				<a href="register">Register</a>
 			</fieldset>
 		</form>
-		<?php
-			if(isset($message)){
-				echo $message;
-			}
-	require_once 'footer.php';
-?>		
-	
-	
+		{% if message is defined %}
+			{{message}}	
+		{% endif %}
+	{% include 'footer.html' %}

@@ -1,30 +1,261 @@
-/*
-Sass::SyntaxError: "body .wrapper nav" failed to @extend "%visuallyhidden".
-The selector "%visuallyhidden" was not found.
-Use "@extend %visuallyhidden !optional" if the extend should be able to fail.
+@font-face {
+  font-family: Tahoma-Bold;
+  src: url("../fonts/tahoma_bold10.ttf"); }
+body * {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  font-family: Tahoma, Geneva, sans-serif; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Tahoma-Bold, Geneva, sans-serif; }
 
-Backtrace:
-public/src/scss/home.scss:58
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/tree/visitors/extend.rb:66:in `block in check_extends_fired!'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/util/subset_map.rb:105:in `block in each_value'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/util/subset_map.rb:105:in `each'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/util/subset_map.rb:105:in `each_value'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/tree/visitors/extend.rb:51:in `check_extends_fired!'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/tree/visitors/extend.rb:16:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/tree/root_node.rb:39:in `css_tree'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:414:in `run'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
-/var/lib/gems/1.9.1/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Sass::SyntaxError: \"body .wrapper nav\" failed to @extend \"%visuallyhidden\".\A The selector \"%visuallyhidden\" was not found.\A Use \"@extend %visuallyhidden !optional\" if the extend should be able to fail.\A "; }
+h1 {
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 72px;
+  line-height: 7.2rem; }
+
+h2 {
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 54px;
+  line-height: 5.4rem; }
+
+h3 {
+  font-size: 28px;
+  font-size: 2.8rem;
+  line-height: 42px;
+  line-height: 4.2rem; }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 27px;
+  line-height: 2.7rem; }
+
+h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem; }
+
+h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 18px;
+  line-height: 1.8rem; }
+
+blockquote {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 36px;
+  line-height: 3.6rem; }
+
+header .add_task .add_task_title {
+  font-family: Tahoma-Bold, Geneva, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem; }
+
+main .task .task_title {
+  font-family: Tahoma-Bold, Geneva, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 27px;
+  line-height: 2.7rem; }
+
+body {
+  background: url("../img/img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  width: 100%; }
+  body > .head {
+    padding: 10px 10px 10px 45px;
+    padding: 1rem 1rem 1rem 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #313131;
+    background: white; }
+    body > .head > .content > .button {
+      margin: 0px 10px 0px 10px;
+      margin: 0rem 1rem 0rem 1rem;
+      padding: 8px;
+      padding: 0.8rem;
+      border: 0.2rem solid #313131; }
+      body > .head > .content > .button:hover {
+        -webkit-transition: all 0.4s ease-in;
+        -moz-transition: all 0.4s ease-in;
+        -ms-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+        background: #313131;
+        color: white; }
+  body .wrapper {
+    padding: 5px;
+    padding: 0.5rem;
+    display: block;
+    min-height: 100%;
+    width: 100%;
+    text-align: center; }
+    body .wrapper header > .add_task {
+      margin: 20px 0px 10px 0px;
+      margin: 2rem 0rem 1rem 0rem;
+      padding: 0px 0px 10px 0px;
+      padding: 0rem 0rem 1rem 0rem;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      -ms-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      -webkit-box-shadow: 0px 0px 10px -2px #777;
+      -moz-box-shadow: 0px 0px 10px -2px #777;
+      box-shadow: 0px 0px 10px -2px #777;
+      background: rgba(255, 255, 255, 0.8);
+      color: #313131;
+      display: inline-block;
+      position: relative;
+      text-align: left;
+      width: 40%;
+      min-width: 300px; }
+      body .wrapper header > .add_task > .fa-list-ul {
+        padding: 10px 20px 0px 20px;
+        padding: 1rem 2rem 0rem 2rem;
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 27px;
+        line-height: 2.7rem;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        display: none; }
+      body .wrapper header > .add_task > div {
+        padding: 10px 20px 0px 20px;
+        padding: 1rem 2rem 0rem 2rem;
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -ms-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        width: 100%; }
+      body .wrapper header > .add_task > .add_task_title {
+        display: none; }
+        body .wrapper header > .add_task > .add_task_title:hover {
+          cursor: text; }
+      body .wrapper header > .add_task .add_task_list {
+        display: none; }
+        body .wrapper header > .add_task .add_task_list .add_task_list_item {
+          display: flex;
+          align-items: center;
+          position: relative; }
+          body .wrapper header > .add_task .add_task_list .add_task_list_item .check {
+            padding: 0px 10px 0px 10px;
+            padding: 0rem 1rem 0rem 1rem; }
+            body .wrapper header > .add_task .add_task_list .add_task_list_item .check input:hover {
+              cursor: pointer; }
+          body .wrapper header > .add_task .add_task_list .add_task_list_item .add_task_list_item_content {
+            padding: 5px 0px 5px 0px;
+            padding: 0.5rem 0rem 0.5rem 0rem; }
+            body .wrapper header > .add_task .add_task_list .add_task_list_item .add_task_list_item_content:hover {
+              cursor: text; }
+          body .wrapper header > .add_task .add_task_list .add_task_list_item .fa-remove {
+            margin: 10px;
+            margin: 1rem;
+            position: absolute;
+            display: none;
+            right: 0; }
+            body .wrapper header > .add_task .add_task_list .add_task_list_item .fa-remove:hover {
+              cursor: pointer; }
+      body .wrapper header > .add_task .add_task_list_item_plus {
+        display: none;
+        margin: 10px 0px 0px 0px;
+        margin: 1rem 0rem 0rem 0rem; }
+        body .wrapper header > .add_task .add_task_list_item_plus:hover {
+          cursor: pointer; }
+      body .wrapper header > .add_task #add_task_form {
+        display: none;
+        height: 3rem; }
+        body .wrapper header > .add_task #add_task_form input[type=submit] {
+          padding: 10px 20px 10px 20px;
+          padding: 1rem 2rem 1rem 2rem;
+          position: absolute;
+          right: 0;
+          cursor: pointer; }
+    body .wrapper main {
+      padding: 40px 40px 0px 40px;
+      padding: 4rem 4rem 0rem 4rem;
+      width: 100%; }
+      body .wrapper main .task {
+        -webkit-box-shadow: 1px 6px 10px -2px #777;
+        -moz-box-shadow: 1px 6px 10px -2px #777;
+        box-shadow: 1px 6px 10px -2px #777;
+        padding: 10px;
+        padding: 1rem;
+        margin: 5px 5px 20px 5px;
+        margin: 0.5rem 0.5rem 2rem 0.5rem;
+        background: rgba(255, 255, 255, 0.8);
+        color: black;
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 20%; }
+        body .wrapper main .task:hover .task_header .task_remove {
+          display: block;
+          cursor: pointer; }
+        body .wrapper main .task .task_header {
+          padding: 0px 10px 0px 10px;
+          padding: 0rem 1rem 0rem 1rem;
+          margin: 0px 20px 0px 0px;
+          margin: 0rem 2rem 0rem 0rem;
+          flex-basis: auto;
+          display: flex; }
+          body .wrapper main .task .task_header .task_title {
+            padding: 0px 10px 10px 0px;
+            padding: 0rem 1rem 1rem 0rem;
+            text-align: left; }
+          body .wrapper main .task .task_header .task_remove {
+            padding: 5px 10px 0px 0px;
+            padding: 0.5rem 1rem 0rem 0rem;
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0; }
+        body .wrapper main .task .task_content {
+          padding: 10px 10px 0px 10px;
+          padding: 1rem 1rem 0rem 1rem;
+          flex-basis: auto;
+          text-align: left;
+          word-wrap: break-word; }
+          body .wrapper main .task .task_content .task_list {
+            display: flex;
+            flex-direction: column; }
+            body .wrapper main .task .task_content .task_list .task_list_item {
+              margin: 0px 0px 10px 0px;
+              margin: 0rem 0rem 1rem 0rem;
+              display: flex; }
+              body .wrapper main .task .task_content .task_list .task_list_item .task_list_item_content {
+                margin: 0px 0px 0px 10px;
+                margin: 0rem 0rem 0rem 1rem; }
+    body .wrapper .alert {
+      position: fixed;
+      top: 0;
+      height: 30px;
+      width: 100px;
+      display: none; }
+
+.form_focus_background {
+  background: white !important;
+  color: #313131 !important; }
+
+.line_through {
+  text-decoration: line-through; }
+
+.tasks > span {
+  display: block; }
+
+/*# sourceMappingURL=home.css.map */

@@ -1,6 +1,4 @@
-<?php
-	require_once 'head.php';
-?>		
+	{% include 'head.html' %}
 		<link rel="stylesheet" type="text/css" href="/organize/css/authenticate.min.css">			
 		<form action="/organize/index.php/register" method="post">
 			<fieldset>
@@ -19,14 +17,12 @@
 				<br/><br/>
 				Email :
 				<input type="email" name="email" placeholder="abc.xyz@swag.com" required/>
-				<input type="hidden" name="form_token" value="<?php echo $form_token; ?>" />
+				<input type="hidden" name="form_token" value="{{form_token}}" />
 				<br/><br/>
 				<input type="Submit" value="Register"/>
 			</fieldset>
 		</form>
-		<?php
-			if(isset($message)){
-				echo $message;
-			}
-	require_once 'footer.php';
-?>		
+		{% if message is defined %}
+			{{message}}	
+		{% endif %}
+	{% include 'footer.html' %}

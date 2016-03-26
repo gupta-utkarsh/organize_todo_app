@@ -1,0 +1,28 @@
+<div class="task" id="task{{task.get_id}}">
+	<div class="task_header">
+		<div class="task_title">
+			{{task.get_title}}	
+		</div>
+		<div class="task_remove">
+			<i class="fa fa-remove"></i>
+		</div>
+	</div>
+	<div class="task_content">
+		{% if task.get_type == 1 %}
+		<div class="task_list">
+			{% for item in task.get_list_items %}
+			<div class="task_list_item {% if item.get_done == 1 %}line_through{% endif %}" id="listitem{{item.get_id}}">
+				<div class="task_list_item_check">
+					<input type="checkbox" name="checkbox" {% if item.get_done == 1 %}checked{% endif %} >
+				</div>
+				<div class="task_list_item_content ">
+					{{item.get_content}}
+				</div>
+			</div>
+			{% endfor %}	
+		</div>
+		{% else %}
+			{{task.get_content}}
+		{% endif %}	
+	</div>
+</div>

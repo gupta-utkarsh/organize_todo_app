@@ -1,20 +1,11 @@
-@import 'reset';
 @import 'typography';
 @import 'mixins';
-
 
 $wrap-background : rgba(256,256,256,1);
 $form-background : rgba(255,255,255,0.8);
 $primary-color: rgb(49,49,49);
 $secondary-color: rgb(69,69,69);
 $alternate-color: rgb(0,0,0); 
-
-
-html{
-	width:100%;
-	height:100%;
-	max-height: 100%;
-}
 
 body{
 	background: url('../img/img.png');
@@ -54,10 +45,6 @@ body{
 		width: 100%;
 		text-align : center;
 
-		nav{
-			@extend %visuallyhidden;
-		}
-		
 		header{
 
 			>.add_task{

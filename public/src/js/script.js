@@ -131,13 +131,11 @@ $(document).ready(function(){
 		    type: 'POST',
 		    data: $task,
 		    success: function(msg) {
-		    	console.log(msg);
 		    	$newtask = msg;
 		        decimate_task();
 		        insert_task(msg);
 		    },
 		    error: function(msg) {
-		      	console.log(msg);
 		    }
 		});
 	}
@@ -159,7 +157,6 @@ $(document).ready(function(){
 				task_id: $task_id
 			},
 			success:function(msg) {
-				console.log(msg);
 				mason();
 			}
 		});
@@ -239,7 +236,6 @@ $(document).ready(function(){
 				done: $done 
 			},
 			success:function(msg) {
-				console.log(msg);
 			}
 		});
     });

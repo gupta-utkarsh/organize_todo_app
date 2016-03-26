@@ -1,7 +1,7 @@
 <?php
 	require '../vendor/autoload.php';
 	session_name('Organize_Session');
-	session_set_cookie_params(0, '/', localhost, false, true);
+	session_set_cookie_params(0, '/', 'localhost', false, true);
 	session_start();
 	Toro::serve(array(
 		'/'=> 'Controller\\Home',
