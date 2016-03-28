@@ -92,7 +92,7 @@
 			require '../config/config.php';
 			$to      = $email;
 			$subject = 'Email Verification Link | Organize';
-			$message = 'Hi there!'."\r\n".'You just signed up on Organize. Please verify your email by clicking on this link : http://localhost/organize/index.php/validate_account?email='.$email.'&hash='.$hash."\r\n\r\n".'Thank you for being patient and happy organizing!'."\r\n".'Cheers!'."\r\n".'~The Organize Team'; 	
+			$message = 'Hi there!'."\r\n".'You just signed up on Organize. Please verify your email by clicking on this link : http://organize.in/validate_account?email='.$email.'&hash='.$hash."\r\n\r\n".'Thank you for being patient and happy organizing!'."\r\n".'Cheers!'."\r\n".'~The Organize Team'; 	
     		$headers='From: Organize Team<'.$CONFIG['email'].'>'."\r\n";
 			return mail($to, $subject, $message, $headers);
 		}

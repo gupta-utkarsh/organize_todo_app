@@ -1,4 +1,3 @@
-$(document).ready(function(){
 
 	//DOM variables
 
@@ -127,7 +126,7 @@ $(document).ready(function(){
 			}
 		}
 		$.ajax({
-		    url: '/organize/index.php/addtask',
+		    url: '/addtask',
 		    type: 'POST',
 		    data: $task,
 		    success: function(msg) {
@@ -151,7 +150,7 @@ $(document).ready(function(){
 
 	function delete_task($task_id){
 		$.ajax({
-			url:'/organize/index.php/deletetask',
+			url:'/deletetask',
 			type: 'POST',
 			data: {
 				task_id: $task_id
@@ -229,7 +228,7 @@ $(document).ready(function(){
         	$listitem.removeClass('line_through')
         }
         $.ajax({
-			url:'/organize/index.php/really',
+			url:'/really',
 			type: 'POST',
 			data: {
 				listitem_id: $listitem_id,
@@ -244,4 +243,3 @@ $(document).ready(function(){
 	var masonry = new Masonry(main, {
 		itemSelector: '.task'
 	});
-});

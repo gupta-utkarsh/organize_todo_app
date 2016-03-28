@@ -6,6 +6,6 @@
 			session_destroy();
 			session_regenerate_id(true);
 			session_start();
-			header("Location : /organize/index.php/");
+			header("Location : http://organize.in");
 		}
 	}

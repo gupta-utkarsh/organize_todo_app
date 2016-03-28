@@ -2,7 +2,7 @@
 	namespace Controller;
 	class ListItemStatus{
 		function get(){
-			header("Location : /organize/index.php/");
+			header("Location : http://organize.in");
 		}
 		function post(){
 			if(isset($_POST['listitem_id'],$_POST['done'])){

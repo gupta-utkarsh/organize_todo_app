@@ -5,11 +5,11 @@
 			$twig = \View\Loader::make();
 			if($user==NULL){
 				$title = "Organize | Log In";
-				echo $twig->render('sign_in.html', array('title' => $title, 'css_url' => '/organize/css/authenticate.min.css'));
+				echo $twig->render('sign_in.html', array('title' => $title, 'css_url' => '/css/authenticate.min.css'));
 			}
 			else{
 				$title = "Organize | Home";
-				echo $twig->render('home.html',array('title' => $title, 'css_url' => '/organize/css/home.min.css', 'user' => $user, 'js_url' => '/organize/js/script.min.js' ));	
+				echo $twig->render('home.html',array('title' => $title, 'css_url' => '/css/home.min.css', 'user' => $user, 'js_url' => '/js/script.min.js' ));	
 			}
 		}
 	} 

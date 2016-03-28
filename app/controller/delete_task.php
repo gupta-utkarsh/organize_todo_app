@@ -2,7 +2,7 @@
 	namespace Controller;
 	class DeleteTask{
 		function get(){
-			header("Location:/organize/index.php/");
+			header("Location:http://organize.in");
 		}
 		function post(){
 			$status = 1;
