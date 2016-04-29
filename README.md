@@ -5,8 +5,11 @@ The application uses [ToroPHP](https://github.com/anandkunal/ToroPHP) for routin
 
 ### Set Up : 
 - Clone the repository.
-- Import the schema from '/schema/organize.sql'.
-- Run `composer install` to install all the dependencies.
-- Modify '/config/config.example.php' and rename it as 'config.php'.
-- Ensure that a SMTP server is set up for sending mails from the application.
-- Link the '/public' folder to the apache server root and name the link as 'organize'.
+- Copy over `config/config.example.php` to `config/config.php` and edit the values.
+- Copy over `config/organize.in.conf` to /etc/apache2/sites-available/organize.in.conf`,edit it and enable it(`sudo a2ensite organize.in`), and add entry in hosts file(`/etc/hosts`).
+- Enable mod_rewrite(`sudo a2enmod rewrite`) and restart apache(`sudo service apache2 restart`).
+- Import schema `/schema/organize.sql`.
+- Install composer (`curl -sS https://getcomposer.org/installer | php`) and run `composer install` to install all the dependencies.
+- Install and run `grunt`.
+- Run `sudo apt-get install ssmtp` and copy over `config/ssmtp.example.conf` to `/etc/ssmtp/ssmtp.conf`.
+- Open [organize.in](http://organize.in) in browser.

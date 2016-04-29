@@ -3,7 +3,6 @@
 	session_name('Organize_Session');
 	session_set_cookie_params(0, '/', 'organize.in', false, true);
 	session_start();
-
 	ToroHook::add('404', function()
 	{
 		header('HTTP/1.1 404 Not Found', true, 404);
@@ -19,6 +18,7 @@
 		'/register' => 'Controller\\NewUser',
 		'/sign_in' => 'Controller\\SignIn',
 		'/validate_account' => 'Controller\\ValidateAccount',
+		'/task/:alpha' => 'Controller\\Task',
 		'/addtask' => 'Controller\\AddTask',
 		'/deletetask' => 'Controller\\DeleteTask',
 		'/archive' => 'Controller\\Archive',

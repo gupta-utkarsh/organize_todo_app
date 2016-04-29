@@ -12,7 +12,7 @@
 			}
 			elseif(!ValidateAccount::check($payload)){
 				$this->status=0;
-				$this->$message = "Error";
+				$this->message = "Error";
 			}
 			else{
 				$this->email = filter_var($payload['email'],FILTER_SANITIZE_EMAIL);
@@ -34,6 +34,7 @@
 					}
 				}
 			}
+			return $this;
 		}
 		private static function get_hash($email){
 			$sql = "SELECT hash from users WHERE email=:email";
