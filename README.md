@@ -10,6 +10,7 @@ The application uses [ToroPHP](https://github.com/anandkunal/ToroPHP) for routin
 - Enable mod_rewrite(`sudo a2enmod rewrite`) and restart apache(`sudo service apache2 restart`).
 - Import schema `/schema/organize.sql`.
 - Install composer (`curl -sS https://getcomposer.org/installer | php`) and run `composer install` to install all the dependencies.
+- Run `npm-install`.
 - Install and run `grunt`.
 - Run `sudo apt-get install ssmtp` and copy over `config/ssmtp.example.conf` to `/etc/ssmtp/ssmtp.conf`.
 - Open [organize.in](http://organize.in) in browser.
